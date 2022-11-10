@@ -1,0 +1,123 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click and Remove</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="click&remove.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="line">
+            <h1>heading <i class="fa-solid fa-plus"></i></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque exercitationem provident labore
+                cupiditate sunt eveniet saepe consectetur inventore id pariatur est asperiores perferendis eius quisquam
+                at quasi hic, beatae dolores!</p>
+        </div>
+        <div class="line">
+            <h1>heading <i class="fa-solid fa-plus"></i></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque exercitationem provident labore
+                cupiditate sunt eveniet saepe consectetur inventore id pariatur est asperiores perferendis eius quisquam
+                at quasi hic, beatae dolores!</p>
+        </div>
+        <div class="line">
+            <h1>heading <i class="fa-solid fa-plus"></i></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque exercitationem provident labore
+                cupiditate sunt eveniet saepe consectetur inventore id pariatur est asperiores perferendis eius quisquam
+                at quasi hic, beatae dolores!</p>
+        </div>
+        <div class="line">
+            <h1>heading <i class="fa-solid fa-plus"></i></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque exercitationem provident labore
+                cupiditate sunt eveniet saepe consectetur inventore id pariatur est asperiores perferendis eius quisquam
+                at quasi hic, beatae dolores!</p>
+        </div>
+    </div>
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="click&remove.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="accordion">
+            <div class="accord">
+                <h1>Heading 1<i class="fa-solid fa-square-plus"></i></h1>
+                <div class="active">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil eos sapiente voluptas saepe.
+                    Temporibus esse totam hic quam, facere, perspiciatis dignissimos quae ducimus quis, quo eum. Ipsam
+                    sint eos laborum.</p>
+                </div>
+            </div>
+            <div class="accord">
+                <h1>Heading 2<i class="fa-solid fa-square-plus"></i></h1>
+                <div class="active">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil eos sapiente voluptas saepe.
+                        Temporibus esse totam hic quam, facere, perspiciatis dignissimos quae ducimus quis, quo eum. Ipsam
+                        sint eos laborum.</p>
+                    </div>
+            </div>
+            <div class="accord">
+                <h1>Heading 3<i class="fa-solid fa-square-plus"></i></h1>
+                <div class="active">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil eos sapiente voluptas saepe.
+                        Temporibus esse totam hic quam, facere, perspiciatis dignissimos quae ducimus quis, quo eum. Ipsam
+                        sint eos laborum.</p>
+                    </div>
+            </div>
+            <div class="accord">
+                <h1>Heading 4<i class="fa-solid fa-square-plus"></i></h1>
+                <div class="active">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil eos sapiente voluptas saepe.
+                        Temporibus esse totam hic quam, facere, perspiciatis dignissimos quae ducimus quis, quo eum. Ipsam
+                        sint eos laborum.</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let Allplus = document.querySelectorAll(".accord i")
+        Allplus.forEach(function (plus) {
+            plus.onclick = function(){
+                let para = plus.parentElement.nextElementSibling
+                if (para.classList.contains("active")) {
+                    para.classList.remove("active")
+
+                    plus.classList.remove("fa-square-plus")
+                    plus.classList.add("fa-square-minus")
+                }
+                else {
+                    para.classList.add("active")
+
+                    plus.classList.remove("fa-square-minus")
+                    plus.classList.add("fa-square-plus")
+                }
+            }
+        }
+        )
+    </script>
+</body>
+
+</html>

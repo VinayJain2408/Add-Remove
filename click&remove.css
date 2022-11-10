@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#wrapper{
+    background: linear-gradient(rgb(230,110,130),rgb(110,110,210));
+}
+#accordion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.accord{
+    border: 1px solid;
+    width: 51rem;
+    /* padding: 10px 15rem; */
+    margin: 5px;
+}
+.accord h1{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: black;
+}
+/* .accord p{
+    display: none;
+}   */
+ .active p{
+    display: none;
+    
+}
